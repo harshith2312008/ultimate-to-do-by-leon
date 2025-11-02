@@ -23,8 +23,14 @@ Your app is now a **production-ready, full-stack application** with all advanced
 - Export/Import functionality (JSON & PDF)
 - Real-time updates
 
-### ✅ **Advanced Features**
+### ✅ **Advanced Features (v2.0)**
 - 📋 Multiple view modes (List, Kanban, Calendar, Timeline, Matrix, Gantt)
+- 🧠 **Natural Language Processing** - Create tasks like Todoist
+- 📋 **Task Templates** - Pre-configured common tasks
+- 🎯 **Batch Operations** - Bulk edit/delete/move tasks
+- ⭐ **Habit Tracker** - Daily habit tracking with streaks
+- 🔔 **Smart Notifications** - Desktop alerts with snooze
+- 💾 **Auto-Backup** - Every 5 minutes, keeps last 10
 - ⏰ Date & Time management with display
 - 🎯 Focus Mode with Pomodoro timer
 - 🤖 AI features (suggestions, categorization)
@@ -37,6 +43,7 @@ Your app is now a **production-ready, full-stack application** with all advanced
 - 💾 User registration with persistence
 - 🗑️ Task deletion
 - ⚡ Advanced settings
+- 🔒 **Enterprise Security** - Secure Electron with preload script
 
 ---
 

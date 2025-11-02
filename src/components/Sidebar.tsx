@@ -15,6 +15,7 @@ import {
   AlertCircle,
   Plus,
   Info,
+  Zap,
 } from 'lucide-react';
 import { useTaskStore } from '../store/taskStore';
 import { cn } from '../lib/utils';
@@ -93,6 +94,11 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
     setFilter({ status: ['completed'] });
   };
 
+  const handleHabitsView = () => {
+    setActiveMenuItem('Habits');
+    setViewMode('habits' as any);
+  };
+
   const menuItems = [
     { 
       icon: Inbox, 
@@ -123,6 +129,12 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
       label: 'Completed', 
       count: tasks.filter((t) => t.status === 'completed').length, 
       action: handleCompletedFilter 
+    },
+    { 
+      icon: Zap, 
+      label: 'Habits', 
+      count: 0, 
+      action: handleHabitsView 
     },
   ];
 

@@ -7,6 +7,7 @@ import CalendarView from './views/CalendarView';
 import TimelineView from './views/TimelineView';
 import MatrixView from './views/MatrixView';
 import GanttView from './views/GanttView';
+import HabitTracker from './HabitTracker';
 import { cn } from '../lib/utils';
 import { exportToJSON, importFromJSON } from '../lib/utils';
 import toast from 'react-hot-toast';
@@ -148,6 +149,8 @@ const MainContent: React.FC<MainContentProps> = ({ sidebarCollapsed }) => {
         return <MatrixView />;
       case 'gantt':
         return <GanttView />;
+      case 'habits' as any:
+        return <HabitTracker />;
       default:
         return <ListView />;
     }

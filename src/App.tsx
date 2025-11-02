@@ -89,12 +89,16 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Listen for IPC events
+  // Listen for IPC events from electron
   useEffect(() => {
-    const { ipcRenderer } = window as any;
-    if (ipcRenderer) {
-      ipcRenderer.on('quick-add', () => setShowQuickAdd(true));
-      ipcRenderer.on('quick-search', () => setShowCommandPalette(true));
+    if (window.electron) {
+      const unsubscribeQuickAdd = window.electron.onQuickAdd(() => setShowQuickAdd(true));
+      const unsubscribeQuickSearch = window.electron.onQuickSearch(() => setShowCommandPalette(true));
+      
+      return () => {
+        unsubscribeQuickAdd();
+        unsubscribeQuickSearch();
+      };
     }
   }, []);
 
